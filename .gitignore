@@ -1,0 +1,79 @@
+# Environment variables and secrets
+.env
+*.key
+*.pem
+
+# Video files (input and output)
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.flv
+*.wmv
+
+# Image files (generated)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Model files
+*.pt
+*.pth
+*.onnx
+*.pb
+
+# Data files
+*.csv
+*.json
+*.xml
+!requirements.txt
+!package.json
