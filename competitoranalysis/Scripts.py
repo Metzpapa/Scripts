@@ -4,10 +4,18 @@ import time
 import csv
 import requests
 import pandas as pd
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # --- CONFIGURATION V2 ---
-# IMPORTANT: Replace with your actual Google Places API key
-API_KEY = '***REMOVED***' 
+API_KEY = os.getenv('GOOGLE_API_KEY')  # Load from .env file
+if not API_KEY:
+    print("ERROR: GOOGLE_API_KEY not found in .env file")
+    print("Please add it to your .env file: GOOGLE_API_KEY='your-key-here'")
+    exit()
+
 OUTPUT_FILE = 'str_cleaning_market_analysis_v2.csv'
 SEARCH_URL = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
 

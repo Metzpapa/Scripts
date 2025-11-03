@@ -1,9 +1,19 @@
 import pandas as pd
 import requests
 import time
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # --- Configuration ---
-API_KEY = '***REMOVED***'  # <-- PASTE YOUR API KEY HERE
+API_KEY = os.getenv('GOOGLE_API_KEY')  # Load from .env file
+if not API_KEY:
+    print("ERROR: GOOGLE_API_KEY not found in .env file")
+    print("Please add it to your .env file: GOOGLE_API_KEY='your-key-here'")
+    exit()
+
 INPUT_CSV_FILE = 'listings.csv'      # <-- The name of your data file
 OUTPUT_CSV_FILE = 'listings_with_addresses.csv'
 LAT_COLUMN = 'latitude'              # The name of your latitude column
