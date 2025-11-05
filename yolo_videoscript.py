@@ -11,8 +11,8 @@ DETECTION_HISTORY_SIZE = 5  # Number of frames to look back for smoothing
 detection_history = defaultdict(lambda: [])
 
 # Path to your input video
-input_video_path = 'dirty.mov'
-output_video_path = 'dirty_with_boxes.mov'
+input_video_path = 'house.mov'
+output_video_path = 'yolohouse_with_boxes.mov'
 
 # Open the input video
 cap = cv2.VideoCapture(input_video_path)
